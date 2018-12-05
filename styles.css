@@ -93,8 +93,7 @@ input::-moz-focus-inner {
 .num {
   font-size: 60px;
   font-weight: 800;
-  margin: 10px 180px 10px;
-  text-align: right"
+  margin: 10px 10px 10px 200px;
 }
 
 .op {
@@ -106,9 +105,8 @@ input::-moz-focus-inner {
 }
 
 .b {
-  position: relative;
-  margin: 10px 10px 10px 50px;
-  left: 90px;
+  margin: 10px 10px 10px 160px;
+  width: 30%;
 }
 
 .bar {
@@ -123,9 +121,12 @@ input::-moz-focus-inner {
 input {
   font-size: 60px;
   font-weight: 800;
+  width: 100%;
+  text-align: right;
+  position: relative;
 }
 
 .form {
-  width: 50%;
-  margin: 10px 10px 10px 180px;
+  width: 40%;
+  margin: 10px 10px 10px 130px;
 }
