@@ -1,5 +1,12 @@
 # ericychoi.github.io
 
+## Develop
+```
+# start http server
+# https://www.npmjs.com/package/http-server
+http-server  .
+```
+
 ## TODO
 - [ ] total timer (30 sec?)
 - [ ] timer-per-problem with progress bar
