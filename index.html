@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- shamelessly copied from https://codepen.io/ainalem/pen/EQXjOR -->
+<!-- 320x240 https://www.adafruit.com/product/2298 -->
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
@@ -11,14 +12,19 @@
 <div class="page">
   <div class="container">
     <div class="main">
-      <div class="num a">89</div>
-      <div class="num b">+ 11</div>
+      <div class="num a"><p>89</p></div>
+      <div class="num op"><p>+</p></div>
+      <div class="num b"><p>11</p></div>
       <svg class="bar">
         <rect width="200" height="10"/>
       </svg>
       <div class="form">
-        <input type="answer" id="answer" />
+        <input type="answer" id="answer" maxlength="4"/>
       </div>
+    </div>
+    <div class="right">
+      <div class="num timer"><p>TIME</p>10</div>
+      <div class="num timer"><p>SCORE</p>10</div>
     </div>
   </div>
 </div>
