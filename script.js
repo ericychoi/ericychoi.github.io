@@ -3,31 +3,66 @@ function init() {
   var timeLeft = $('#timer').val();
   var started = false;
   var timer;
-  $('#answer').keypress(function(e) {
-    if(e.keyCode == 13 && !started) {
-      started = true
-      timer = setInterval(function() {
-        timeLeft = $('#timer').val();
-        if (timeLeft == 0) {
-          clearInterval(timer);
-          started = false;
-          $('#timer').val(30);
-          return;
-        }
-        $('#timer').val(timeLeft-1);
-      }, 1000);
-    }
-    // var domAttributes = anime({
-    //   targets: '#timer',
-    //   value: 0,
-    //   duration: 30000,
-    //   round: 1,
-    //   easing: 'easeInOutExpo'
-    // });
-  });
-  //$('#answer').focus();
-  var input = document.getElementById("answer").focus();
 
+  var reset = function() {
+    $('#score').val(0);
+    $('#a').val('A');
+    $('#b').val('B');
+  };
+
+  var timeUp = function() {
+    started = false;
+    console.log("Finished!");
+    reset();
+  };
+
+  var incrementScore = function() {
+    var s = parseInt($('#score').val());
+    $('#score').val(s+2);
+  };
+
+  var resetProblem = function() {
+    $('#a').val(math.randomInt(1, 20));
+    $('#b').val(math.randomInt(1, 20));
+    $('#answer').val('');
+  };
+
+  $('#answer').keypress(function(e) {
+    // enter key
+    if(e.keyCode == 13) {
+      if (!started) {
+        started = true
+        console.log("Start!");
+        resetProblem();
+        timer = setInterval(function() {
+          timeLeft = $('#timer').val();
+          if (timeLeft == 0) {
+            timeUp();
+            clearInterval(timer);
+            $('#timer').val(30);
+            return;
+          }
+          $('#timer').val(timeLeft-1);
+        }, 1000);
+      }
+      else {
+        var a = parseInt($('#a').val(), 10);
+        var b = parseInt($('#b').val(), 10);
+        var answer = parseInt($('#answer').val(), 10);
+        if (a + b == answer) {
+          console.log("Correct!");
+          incrementScore();
+          resetProblem();
+        }
+        else {
+          console.log("Wrong!");
+        }
+      }
+    }
+  });
+
+  //https://stackoverflow.com/questions/4331022/focus-input-box-on-load
+  var input = document.getElementById("answer").focus();
   $("[autofocus]").on("focus", function() {
     if (this.setSelectionRange) {
       var len = this.value.length * 2;
@@ -39,6 +74,7 @@ function init() {
   }).focus();
 }
 window.onload = init;
+
 $( document ).ready(function() {
   $( "#answer" ).focus();
 });

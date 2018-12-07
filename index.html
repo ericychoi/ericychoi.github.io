@@ -5,6 +5,7 @@
 <head>
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="math.min.js"></script>
   <script src="anime.min.js"></script>
   <script src="script.js"></script>
 </head>
@@ -15,9 +16,9 @@
 <div class="page">
   <div class="container">
     <div class="main">
-      <div class="num a"><p>89</p></div>
+      <div class="num"><input id="a" value="A" disabled></div>
       <div class="num op"><p>+</p></div>
-      <div class="num b"><p>11</p></div>
+      <div class="num"><input id="b" value="B" disabled></div>
       <svg class="bar">
         <rect width="200" height="10"/>
       </svg>
@@ -27,7 +28,7 @@
     </div>
     <div class="right">
       <div class="label"><p>TIME</p><input id="timer" value="30" disabled></div>
-      <div class="label"><p>SCORE</p>10</div>
+      <div class="label"><p>SCORE</p><input id="score" value="0" disabled></div>
     </div>
   </div>
 </div>
