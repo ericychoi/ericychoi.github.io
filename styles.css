@@ -112,6 +112,9 @@ input {
   width: 100%;
   text-align: right;
   position: relative;
+  border: inherit;
+  color: inherit;
+  background: inherit;
 }
 
 .form {
@@ -123,11 +126,15 @@ p {
   margin: 0px
 }
 
-.timer {
+div.label, .score {
   margin: 20px 10px 60px 30px;
 }
 
-.timer p {
+input {
+  margin: 0
+}
+
+.label p {
   text-align: right;
   font-size: 12px;
   font-weight: 800;

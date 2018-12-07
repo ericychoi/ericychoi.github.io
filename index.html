@@ -4,6 +4,9 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="anime.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -19,12 +22,12 @@
         <rect width="200" height="10"/>
       </svg>
       <div class="form">
-        <input type="answer" id="answer" maxlength="4"/>
+        <input type="text" id="answer" maxlength="4" autofocus/>
       </div>
     </div>
     <div class="right">
-      <div class="num timer"><p>TIME</p>10</div>
-      <div class="num timer"><p>SCORE</p>10</div>
+      <div class="label"><p>TIME</p><input id="timer" value="30" disabled></div>
+      <div class="label"><p>SCORE</p>10</div>
     </div>
   </div>
 </div>
