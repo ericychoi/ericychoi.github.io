@@ -83,9 +83,14 @@ function init() {
     }
   });
 
-
   $(document).keypress(function(e) {
     if (e.keyCode == 13 && $.modal.isActive()) {  // enter key
+      $.modal.close();
+      $('#answer').focus();
+    }
+  });
+  $(window).click(function(e) {
+    if ($.modal.isActive()) {
       $.modal.close();
       $('#answer').focus();
     }
