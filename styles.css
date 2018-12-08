@@ -140,3 +140,31 @@ input {
   font-weight: 800;
   margin: 0px 10px 0 0px;
 }
+
+.modal {
+  display: none;
+  height: 120px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  max-width: 200px;
+  text-align: center;
+}
+
+.modal.open {
+   display: block;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+#message {
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
