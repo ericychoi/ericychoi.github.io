@@ -64,18 +64,6 @@ function init() {
     }
   });
 
-  //https://stackoverflow.com/questions/4331022/focus-input-box-on-load
-  var input = document.getElementById("answer").focus();
-  $("[autofocus]").on("focus", function() {
-    if (this.setSelectionRange) {
-      var len = this.value.length * 2;
-      this.setSelectionRange(len, len);
-    } else {
-      this.value = this.value;
-    }
-    this.scrollTop = 999999;
-  }).focus();
-
   $('.modal').on($.modal.AFTER_CLOSE, function(event, modal) {
     if (!started) {
       started = true
