@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- shamelessly copied from https://codepen.io/ainalem/pen/EQXjOR -->
+<!-- 320x240 https://www.adafruit.com/product/2298 -->
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="math.min.js"></script>
+  <script src="anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet">
+
+<!-- Link to open the modal -->
+<div class="page">
+  <div class="container">
+    <div class="modal">
+      <div class="logo">Hexagon</div>
+      <div id="message">Press Enter to Start</div>
+    </div>
+    <div class="main">
+      <canvas id="canvas" width="800" height="500"/>
+    </div>
+    <div class="right">
+      <div class="label"><p>TIME</p><input id="timer" value="30" disabled></div>
+      <div class="label"><p>SCORE</p><input id="score" value="0" disabled></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+::selection {
+  background: #2D2F36;
+}
+::-webkit-selection {
+  background: #2D2F36;
+}
+::-moz-selection {
+  background: #2D2F36;
+}
+
+body {
+  background: white;
+  font-family: 'Inter UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.page {
+  background: #e2e2e5;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  position: absolute;
+  place-content: center;
+  width: calc(100% - 40px);
+}
+@media (max-width: 767px) {
+  .page {
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}
+.container {
+  display: flex;
+  height: 240px;
+  margin: 0 auto;
+  width: 320px;
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+}
+.main {
+  background: white;
+  height: calc(100% - 20px);
+  top: 10px;
+  position: relative;
+  width: 70%;
+}
+@media (max-width: 767px) {
+  .left {
+    height: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-height: 270px;
+  }
+}
+
+.right {
+  background: #474A59;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  color: #F1F1F2;
+  position: relative;
+  width: 30%;
+}
+@media (max-width: 767px) {
+  .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
+  }
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+.num {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 10px 30px 10px 140px;
+}
+
+.op {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0px;
+  position: absolute;
+  left: 100px;
+}
+
+.b {
+}
+
+.bar {
+  position: relative;
+  height: 10px;
+  width: 120px;
+  left: 80px;
+  x: 10px;
+  top: 0;
+}
+
+input {
+  font-size: 40px;
+  font-weight: 800;
+  width: 100%;
+  text-align: right;
+  position: relative;
+  border: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+.form {
+  margin: 10px 30px 10px 90px;
+}
+
+p {
+  text-align: right;
+  margin: 0px
+}
+
+div.label, .score {
+  margin: 20px 10px 60px 30px;
+}
+
+input {
+  margin: 0
+}
+
+.label p {
+  text-align: right;
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0px 10px 0 0px;
+}
+
+.modal {
+  display: none;
+  height: 120px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  max-width: 200px;
+  text-align: center;
+}
+
+.modal.open {
+   display: block;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+#message {
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+/* hide spinner
+https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
